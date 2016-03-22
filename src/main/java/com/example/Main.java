@@ -13,5 +13,6 @@ public class Main {
 
         Performer performer = (Performer) context.getBean("kenny2");
         performer.perform();
+        System.out.println("Add new out");
     }
 }
