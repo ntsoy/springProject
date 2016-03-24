@@ -12,6 +12,6 @@ public class Main {
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
         Performer performer = (Performer) context.getBean("kenny2");
         performer.perform();
-        System.out.println("Add new out home");
+        System.out.println("Add new out work");
     }
 }
