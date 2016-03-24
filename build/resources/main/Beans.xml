@@ -16,5 +16,6 @@
    <bean id="kenny2" class="com.example.Instrumentalist">
       <property name="song" value = "Jingle Bells" />
       <property name="instrument" ref="saxophone" />
+      <property name="age" value="34" />
    </bean>
 </beans>

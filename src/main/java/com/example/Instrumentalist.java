@@ -9,6 +9,7 @@ public class Instrumentalist implements Performer{
 
     @Override
     public void perform() {
+        System.out.println("Age is " + this.age);
         System.out.println("Playing " + song + " : ");
         instrument.play();
     }
@@ -16,6 +17,7 @@ public class Instrumentalist implements Performer{
     private String song;
 
     public void setSong(String song){
+
         this.song = song;
     }
 
@@ -28,6 +30,16 @@ public class Instrumentalist implements Performer{
     }
 
     private Instrument instrument;
+
+    private int age;
+
+    public void setAge (int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
 
     public void setInstrument(Instrument instrument) {
         this.instrument = instrument;
