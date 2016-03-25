@@ -27,5 +27,10 @@
          </map>
       </property>
    </bean>
+   <bean id="songSelector" class="com.example.SongSelectior" />
+   <bean id="carl" class="com.example.Instrumentalist">
+      <property name="song" value="#{songSelector.getSong().toUpperCase()}" />
+      <property name="instrument" ref="piano" />
+   </bean>
 
 </beans>

@@ -8,8 +8,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
 
+
+
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-        Performer performer = (Performer) context.getBean("hank");
+        Performer performer = (Performer) context.getBean("carl");
         performer.perform();
         System.out.println("Spring in action, page 100");
 
