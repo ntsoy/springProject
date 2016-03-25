@@ -21,10 +21,10 @@
    </bean>
    <bean id="hank" class="com.example.OneManBand">
       <property name="instruments">
-         <list>
-            <ref bean="saxophone" />
-            <ref bean="piano" />
-         </list>
+         <map>
+            <entry key="SAXOPHONE" value-ref="saxophone" />
+            <entry key="PIANO" value-ref="piano" />
+         </map>
       </property>
    </bean>
 

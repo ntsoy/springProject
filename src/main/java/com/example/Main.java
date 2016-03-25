@@ -11,7 +11,7 @@ public class Main {
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
         Performer performer = (Performer) context.getBean("hank");
         performer.perform();
-        System.out.println("Spring in ation, page 95");
+        System.out.println("Spring in action, page 100");
 
     }
 }

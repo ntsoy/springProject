@@ -1,6 +1,6 @@
 package com.example;
 
-import java.util.Collection;
+import java.util.Map;
 
 public class OneManBand implements Performer {
     public OneManBand() {
@@ -8,14 +8,17 @@ public class OneManBand implements Performer {
 
     @Override
     public void perform() {
-        for (Instrument instrument : instruments) {
+        for (String key : instruments.keySet()) {
+            System.out.println(key + " : ");
+            Instrument instrument = instruments.get(key);
             instrument.play();
         }
     }
 
-    private Collection<Instrument> instruments;
+    private Map<String, Instrument> instruments;
 
-    public void setInstruments(Collection<Instrument> instruments) {
+    public void setInstruments(Map<String, Instrument> instruments) {
+
         this.instruments = instruments;
     }
 }
