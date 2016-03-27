@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation=
+       "http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/util  http://www.springframework.org/schema/util/spring-util-3.1.xsd">
    <bean id="sonnet29" class="com.example.Sonnet29" />
    <bean id="duke" class="com.example.PoeticJuggler">
       <constructor-arg value="15" />
@@ -28,8 +32,23 @@
    </bean>
    <bean id="songSelector" class="com.example.SongSelectior" />
    <bean id="carl" class="com.example.Instrumentalist">
-      <property name="song" value="#{songSelector.getSong().toUpperCase()}" />
+      <property name="city" value="#{cities.?[population gt 100].![name + ', pop = ' + population]}" />
       <property name="instrument" ref="piano" />
    </bean>
+
+   <util:list id="cities">
+      <bean class="com.example.City">
+         <property name="name" value="Almaty"/>
+         <property name="population" value="200" />
+      </bean>
+      <bean class="com.example.City">
+         <property name="name" value="Astana"/>
+         <property name="population" value="100"/>
+      </bean>
+      <bean class="com.example.City">
+         <property name="name" value="Tashkent"/>
+         <property name="population" value="300"/>
+      </bean>
+   </util:list>
 
 </beans>

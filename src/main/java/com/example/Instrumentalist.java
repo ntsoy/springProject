@@ -9,9 +9,13 @@ public class Instrumentalist implements Performer{
 
     @Override
     public void perform() {
-        System.out.println("Age is " + this.age);
+        for (String city : this.city) {
+            System.out.println(city);
+        }
+        //System.out.println(this.city.getName());
+        /*System.out.println("Age is " + this.age);
         System.out.println("Playing " + song + " : ");
-        instrument.play();
+        instrument.play();*/
     }
 
     private String song;
@@ -43,5 +47,11 @@ public class Instrumentalist implements Performer{
 
     public void setInstrument(Instrument instrument) {
         this.instrument = instrument;
+    }
+
+    private String[] city;
+
+    public void setCity(String[] city) {
+        this.city = city;
     }
 }
