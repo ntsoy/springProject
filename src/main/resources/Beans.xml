@@ -13,7 +13,7 @@
       <constructor-arg ref="sonnet29" />
    </bean>
    <bean id="kenny" class="com.example.Instrumentalist">
-           <property name="song" value = "Jingle Bells" />
+      <property name="song" value = "Jingle Bells" />
    </bean>
    <bean id="saxophone" class="com.example.Saxophone" />
    <bean id="piano" class="com.example.Piano" />
