@@ -16,24 +16,21 @@
       <property name="song" value = "Jingle Bells" />
    </bean>
    <bean id="saxophone" class="com.example.Saxophone" />
-   <bean id="piano" class="com.example.Piano" />
-   <bean id="kenny2" class="com.example.Instrumentalist">
+   <bean id="instrument" class="com.example.Piano" />
+   <bean id="kenny2" class="com.example.Instrumentalist" autowire="byName">
       <property name="song" value = "Jingle Bells" />
-      <property name="instrument" ref="piano" />
       <property name="age" value="34" />
    </bean>
    <bean id="hank" class="com.example.OneManBand">
       <property name="instruments">
          <map>
             <entry key="SAXOPHONE" value-ref="saxophone" />
-            <entry key="PIANO" value-ref="piano" />
          </map>
       </property>
    </bean>
    <bean id="songSelector" class="com.example.SongSelectior" />
    <bean id="carl" class="com.example.Instrumentalist">
       <property name="city" value="#{cities.?[population gt 100].![name + ', pop = ' + population]}" />
-      <property name="instrument" ref="piano" />
    </bean>
 
    <util:list id="cities">

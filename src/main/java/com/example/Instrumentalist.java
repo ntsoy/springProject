@@ -9,13 +9,13 @@ public class Instrumentalist implements Performer{
 
     @Override
     public void perform() {
-        for (String city : this.city) {
+        /*for (String city : this.city) {
             System.out.println(city);
-        }
+        }*/
         //System.out.println(this.city.getName());
-        /*System.out.println("Age is " + this.age);
+        System.out.println("Age is " + this.age);
         System.out.println("Playing " + song + " : ");
-        instrument.play();*/
+        instrument.play();
     }
 
     private String song;
