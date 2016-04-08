@@ -1,11 +1,13 @@
 package com.example;
 
 
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Instrumentalist implements Performer{
     public Instrumentalist(){
     }
+
 
     @Override
     public void perform() {
@@ -44,7 +46,8 @@ public class Instrumentalist implements Performer{
     public int getAge() {
         return this.age;
     }
-
+    @Autowired
+    @Qualifier("gg")
     public void setInstrument(Instrument instrument) {
         this.instrument = instrument;
     }

@@ -21,11 +21,13 @@
       <property name="song" value = "Jingle Bells" />
    </bean>
    <bean id="saxophone" class="com.example.Saxophone" />
+
    <bean id="instrument" class="com.example.Piano" primary="true"/>
    <bean id="kenny2" class="com.example.Instrumentalist" autowire="byType">
       <property name="song" value = "Jingle Bells " />
       <property name="age" value="34" />
    </bean>
+   <bean id="guitar" class="com.example.Guitar"/>
    <bean id="hank" class="com.example.OneManBand">
       <property name="instruments">
          <map>
