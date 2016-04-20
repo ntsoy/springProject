@@ -46,8 +46,8 @@ public class Instrumentalist implements Performer{
     public int getAge() {
         return this.age;
     }
-    @Autowired
-    @Qualifier("gg")
+
+
     public void setInstrument(Instrument instrument) {
         this.instrument = instrument;
     }

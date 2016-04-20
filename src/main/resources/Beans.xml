@@ -19,6 +19,7 @@
    </bean>
    <bean id="kenny" class="com.example.Instrumentalist">
       <property name="song" value = "Jingle Bells" />
+      <property name="instrument" ref="saxophone" />
    </bean>
    <bean id="saxophone" class="com.example.Saxophone" />
 
@@ -39,7 +40,6 @@
    <bean id="carl" class="com.example.Instrumentalist">
       <property name="city" value="#{cities.?[population gt 100].![name + ', pop = ' + population]}" />
    </bean>
-
    <util:list id="cities">
       <bean class="com.example.City">
          <property name="name" value="Almaty"/>
